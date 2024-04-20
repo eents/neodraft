@@ -40,6 +40,15 @@ header h1 {
 }
 
 
+/* BODY SECTION */
+
+#about-planet {
+    position: absolute;
+    top: 14vh;
+    left: -3em;
+    z-index: -2;
+}
+
 
 /* MOBILE STYLING */
 
@@ -51,20 +60,28 @@ header h1 {
 
     header {
         margin-top: 3em;
+        width: 100vw;
     }
 
     #logo-img {
-        width: 22em;
+        width: 85vw;
     }
 
     #change-subtitle-button {
         margin: -.5em auto 0 auto;
-        width: 23em;
+        width: 95vw;
     }
 
     header h1 {
         margin-top: 3px;
         font-size: 1.1em;
+    }
+
+
+    /* BODY SECTION */
+
+    #about-planet {
+        top: 17vh;
     }
 
 }

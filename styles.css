@@ -3,6 +3,11 @@
     src: url(/src/fonts/OldNewspaperTypes.ttf);
 }
 
+@font-face {
+    font-family: Silvers;
+    src: url(/src/fonts/SILVERS.ttf);
+}
+
 :root {
     --base-dark: #0E0E0E;
     --base-light: #eeeeee;

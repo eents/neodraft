@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../libs/p5.min.js"></script>
+
+    <style>
+        .text1 { font-family: Silvers; fill: var(--base-light); letter-spacing: 1px;}
+
+        @keyframes rotateText {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        text {
+            animation: rotateText 11s linear infinite;
+            transform-origin: center;
+        }
+
+        svg {
+            position: absolute;
+            left: -30px;
+            top: -30px;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        function preload() {
+            img = loadImage('../../imgs/index/112023.gif');
+        }
+
+        function setup() {
+            createCanvas(235, 235, WEBGL);
+        }
+
+        function draw() {
+            rotateY(frameCount * 0.01);
+            rotateZ(frameCount * 0.001);
+            noStroke();
+            sphere(90, 12, 12);
+            texture(img);
+        }
+    </script>
+
+    <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+        <path id="circlePath" d="M150,150 m-112.5,0a112.5,112.5 0 1,0 225,0a112.5,112.5 0 1,0 -225,0" fill="none" />
+        <text>
+            <textPath xlink:href="#circlePath">
+                <tspan class="text1">About Me</tspan>
+            </textPath>
+        </text>
+    </svg>
+    
+</body>
+</html>

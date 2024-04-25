@@ -8,6 +8,16 @@
     src: url(/src/fonts/SILVERS.ttf);
 }
 
+@font-face {
+    font-family: CourierPolski1941;
+    src: url(/src/fonts/CourierPolski1941.ttf);
+}
+
+@font-face {
+    font-family: DePixel;
+    src: url(src/fonts/DePixel.ttf);
+}
+
 :root {
     --base-dark: #0E0E0E;
     --base-light: #eeeeee;
@@ -20,4 +30,11 @@
     text-decoration: none;
     color: inherit;
     scroll-behavior: smooth;
+}
+
+.iframe-span-link {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
 }

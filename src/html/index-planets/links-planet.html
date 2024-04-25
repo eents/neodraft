@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../../../styles.css">
+    <script src="../../libs/p5.min.js"></script>
+
+    <style>
+        .text1 { font-family: Silvers; fill: var(--base-light); letter-spacing: 1px;}
+
+        @keyframes rotateText {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        text {
+            animation: rotateText 9s linear infinite;
+            transform-origin: center;
+        }
+
+        svg {
+            position: absolute;
+            left: 11px;
+            top: 11px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+
+    <script>
+        let sphereRadius = 90;
+        let ringRadius = 140;
+        let ringThickness = 12;
+        let sphereRotationSpeed = 0.001;
+        let ringRotationSpeed = 0.005;
+        let sphereTexture, ringTexture;
+
+        function preload() {
+            sphereTexture = loadImage('../../imgs/index/rays4.gif');
+            ringTexture = loadImage('../../imgs/index/glitter3.gif');
+        }
+
+        function setup() {
+            createCanvas(320, 320, WEBGL);
+        }
+
+        function draw() {
+            clear();
+            drawSphere();
+            drawRing();
+        }
+
+        function drawSphere() {
+            texture(sphereTexture);
+            noStroke();
+            rotateX(110);
+            rotateZ(frameCount * sphereRotationSpeed);
+            rotateX(frameCount * sphereRotationSpeed);
+            sphere(sphereRadius);
+        }
+
+        function drawRing() {
+            push();
+            rotateX(HALF_PI);
+            tint(255, 180);
+            texture(ringTexture);
+            noStroke();
+            rotateX(frameCount * ringRotationSpeed);
+            torus(ringRadius, ringThickness);
+            pop();
+        }
+    </script>
+
+    <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
+        <path id="circlePath" d="M150,150 m-112.5,0a112.5,112.5 0 1,0 225,0a112.5,112.5 0 1,0 -225,0" fill="none" />
+        <text>
+            <textPath xlink:href="#circlePath">
+                <tspan class="text1">Links</tspan>
+            </textPath>
+        </text>
+    </svg>
+
+    <a target="_parent" href="../links.html" class="iframe-span-link"></a>
+    
+</body>
+</html>

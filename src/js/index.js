@@ -1,23 +1,14 @@
-$('#nanoblog-link').click(function(){
-    $('#nanoblog').css('animation-name', 'open-nanoblog')
-    $('#close-nanoblog-btn').fadeIn(2100)
-    $('#close-nanoblog-btn').css('display', 'flex')
-    })
-
-$('#close-nanoblog-btn').click(function(){
-    $('#nanoblog').css('animation-name', 'close-nanoblog')
-    $('#close-nanoblog-btn').fadeOut(600)
-    })
-
-$('#neighbors-link').click(function(){
+$('#open-neighbors-btn').click(function(){
+    $('#open-neighbors-btn').css('z-index', -2)
     $('#neighbors').css('animation-name', 'open-neighbors')
-    $('#close-neighbors-btn').fadeIn(2400)
+    $('#close-neighbors-btn').fadeIn(2100)
     $('#close-neighbors-btn').css('display', 'flex')
-})
+    })
 
 $('#close-neighbors-btn').click(function(){
+    $('#open-neighbors-btn').css('z-index', 1)
     $('#neighbors').css('animation-name', 'close-neighbors')
-    $('#close-neighbors-btn').fadeOut(400)
+    $('#close-neighbors-btn').fadeOut(600)
 })
 
 $(document).ready(function () {

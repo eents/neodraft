@@ -20,14 +20,14 @@
         }
 
         text {
-            animation: rotateText 11s linear infinite;
+            animation: rotateText 10s linear infinite;
             transform-origin: center;
         }
 
         svg {
             position: absolute;
-            left: -30px;
-            top: -30px;
+            left: -55px;
+            top: -55px;
         }
     </style>
 </head>
@@ -35,32 +35,32 @@
 
     <script>
         function preload() {
-            img = loadImage('../../imgs/index/112023.gif');
+            img = loadImage('../../imgs/index/022824-1.gif');
         }
 
         function setup() {
-            createCanvas(235, 235, WEBGL);
+            createCanvas(470, 470, WEBGL);
         }
 
         function draw() {
-            rotateY(frameCount * 0.01);
-            rotateZ(frameCount * 0.001);
+            rotateY(11);
+            rotateY(frameCount * -0.002);
             noStroke();
-            sphere(90, 12, 12);
+            sphere(180, 12, 12);
             texture(img);
         }
     </script>
 
-    <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
-        <path id="circlePath" d="M150,150 m-112.5,0a112.5,112.5 0 1,0 225,0a112.5,112.5 0 1,0 -225,0" fill="none" />
+    <svg height="580" width="580" xmlns="http://www.w3.org/2000/svg">
+        <path id="circlePath" d="M300,300 m-225,0a225,225 0 1,0 450,0a225,225 0 1,0 -450,0" fill="none" />
         <text>
             <textPath xlink:href="#circlePath">
-                <tspan class="text1">About Me</tspan>
+                <tspan class="text1">Broadcasts</tspan>
             </textPath>
         </text>
     </svg>
 
-    <a target="_parent" href="../about.html" class="iframe-span-link"></a>
+    <a target="_parent" href="../broadcasts.html" class="iframe-span-link"></a>
     
 </body>
 </html>

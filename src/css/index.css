@@ -49,6 +49,112 @@ header h1 {
     z-index: -2;
 }
 
+#broadcasts-planet {
+    position: absolute;
+    left: 27vw;
+    top: 63vh;
+    z-index: -2;
+}
+
+#links-planet {
+    position: absolute;
+    right: 15vw;
+    top: 44vh;
+}
+
+#guestbook-planet {
+    position: absolute;
+    left: 20vw;
+    top: 24vh;
+}
+
+#streetart-planet {
+    position: absolute;
+    left: 5vw;
+    bottom: 12vh;
+    z-index: -2;
+}
+
+#neighbors-planet {
+    position: absolute;
+    right: 3vw;
+    top: 9vh;
+}
+
+
+/* NEIGHBORS SECTION */
+
+@keyframes open-neighbors {
+    from {transform: translateX(222px);}
+    to {transform: translateX(0px);}
+}
+
+@keyframes close-neighbors {
+    from {transform: translateX(0px);}
+    to {transform: translateX(222px);}
+}
+
+#neighbors {
+    background-image: url(../imgs/index/bg-stars-invert.gif);
+    height: 100vh;
+    width: 222px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+    transform: translateX(222px);
+    animation-name: none;
+    animation-duration: 2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+#open-neighbors-btn {
+    position: absolute;
+    width: 175px;
+    height: 175px;
+    right: 3vw;
+    top: 9vh;
+    z-index: 1;
+}
+
+#close-neighbors-btn {
+    display: none;
+    justify-content: center;
+    place-items: center;
+    position: absolute;
+    top: .3em;
+    right: .3em;
+    width: 2em;
+    height: 2em;
+}
+
+#close-neighbors-btn img {
+    width: 1em;
+    height: 1em;
+}
+
+/* FOOTER SECTION */
+
+footer {
+    position: absolute;
+    bottom: .5em;
+    right: 1em;
+    z-index: -1;
+}
+
+footer p {
+    color: var(--base-light);
+    font-size: .75em;
+    font-family: CourierPolski1941;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+
+footer p a {
+    letter-spacing: -.5px;
+}
+
 
 /* MOBILE STYLING */
 

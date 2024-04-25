@@ -1,0 +1,93 @@
+:root {
+    --about-bg-color: #373700;
+    --about-fg-color: #e9f983;
+}
+
+body {
+    background-color: var(--about-bg-color);
+    background-image: url(../imgs/about/about-bg.png);
+}
+
+#content-wrap {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin: 5vh 0;
+}
+
+#left-section {
+    max-width: 33em;
+    transform: translateY(-6em);
+}
+
+#right-section {
+    width: 33%;
+    max-width: 33em;
+    outline: 2px dashed var(--about-fg-color);
+}
+
+#about-main-text {
+    background-color: var(--base-dark);
+    max-width: 30em;
+    margin: 0 auto;
+    color: var(--base-light);
+    padding: 1em 1em;
+    line-height: 1.6em;
+    border: 1px solid var(--base-light);
+    font-family: DePixel;
+    font-size: .9em;
+}
+
+#about-main-text a {
+    color: var(--about-fg-color);
+    text-decoration: underline;
+}
+
+#about-main-text a:hover, #about-main-text a:active {
+    color: var(--base-light);
+}
+
+.favorites-list {
+    background-color: var(--about-bg-color);
+    color: var(--about-fg-color);
+    padding: 1em 1em;
+    font-size: .8em;
+    border: 1px solid var(--about-fg-color);
+    font-family: DePixel;
+    line-height: 1.5em;
+    margin: 0 auto;
+    max-width: 36em;
+    margin-top: 3em;
+}
+
+.favorites-list ul a {
+    text-decoration: underline;
+}
+
+.list-title {
+    text-align: center;
+    font-size: 1.2em;
+    text-decoration: dotted underline;
+}
+
+.list-subtitle {
+    text-align: center;
+    font-size: .75em;
+    margin-bottom: 1em;
+}
+
+.favorites-list ul {
+    padding: 0 1em;
+    list-style-type: square;
+}
+
+#video-games-text ul li a {
+    text-decoration: none;
+    font-size: .7em;
+}
+
+.last-list {
+    margin-bottom: 3em;
+}

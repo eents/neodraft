@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link rel="stylesheet" href="../../../styles.css">
     <script src="../../libs/p5.min.js"></script>
 
@@ -20,14 +20,14 @@
         }
 
         text {
-            animation: rotateText 11s linear infinite;
+            animation: rotateText 5s linear infinite;
             transform-origin: center;
         }
 
         svg {
             position: absolute;
-            left: -30px;
-            top: -30px;
+            left: 12px;
+            top: 12px;
         }
     </style>
 </head>
@@ -35,32 +35,34 @@
 
     <script>
         function preload() {
-            img = loadImage('../../imgs/index/112023.gif');
+            img = loadImage('../../imgs/index/shh-rework.gif');
         }
 
         function setup() {
-            createCanvas(235, 235, WEBGL);
+            createCanvas(175, 175, WEBGL);
         }
-
+  
         function draw() {
             rotateY(frameCount * 0.01);
-            rotateZ(frameCount * 0.001);
+            rotateX(frameCount * 0.03);
+            rotateZ(frameCount * -0.005);
             noStroke();
-            sphere(90, 12, 12);
+            clear();
             texture(img);
+            sphere(45, 9, 9);
         }
     </script>
 
-    <svg height="300" width="300" xmlns="http://www.w3.org/2000/svg">
-        <path id="circlePath" d="M150,150 m-112.5,0a112.5,112.5 0 1,0 225,0a112.5,112.5 0 1,0 -225,0" fill="none" />
+    <svg height="150" width="150" xmlns="http://www.w3.org/2000/svg">
+        <path id="circlePath" d="M75,75 m-70,0a70,70 0 1,0 140,0a70,70 0 1,0 -140,0" fill="none" />
         <text>
             <textPath xlink:href="#circlePath">
-                <tspan class="text1">About Me</tspan>
+                <tspan class="text1">Guestbook</tspan>
             </textPath>
         </text>
     </svg>
 
-    <a target="_parent" href="../about.html" class="iframe-span-link"></a>
+    <a target="_blank" href="google.com" class="iframe-span-link"></a>
     
 </body>
 </html>
